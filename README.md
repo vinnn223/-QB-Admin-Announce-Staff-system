@@ -5,19 +5,14 @@
 #2 in the Config you Can also change the command to accese the command.
 
 
--- Configuration table for the announcement system
-Config = {}
+How to install
 
--- Define roles that are allowed to use the announce command
-Config.AllowedRoles = {
-    'admin',
-    'superadmin',
-    'mod',
-}
+1. Replace chat in your resources\[gameplay] folder
+2. Enjoy!
 
--- Define the command name for the announce staff command
-Config.AnnounceStaffCommand = 'announcestaff'
 
--- End of configuration
+DO NOT UPLOAD OR DISTRIBUTE 
+THIS FILE WITHOUT EXPLICIT PERMISSION
 
+All Credits - MrSkeeps
 
