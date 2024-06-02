@@ -7,8 +7,9 @@
 
 How to install
 
-1. Replace chat in your resources\[gameplay] folder
-2. Enjoy!
+1. Replace chat in your resources folder
+2. ensure QB-Admin-Announce-Staff-system 
+3. Enjoy!
 
 
 DO NOT UPLOAD OR DISTRIBUTE 
