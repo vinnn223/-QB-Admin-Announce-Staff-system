@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+    <style>
+        body.dark-overlay {
+            background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+        }
+        #announcement {
+            display: none;
+            color: red;
+            font-size: 26px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #playerInfo {
+            font-size: 18px;
+            color: rgb(222, 238, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="announcement">
+        <div id="message"></div>
+        <div id="playerInfo"></div>
+    </div>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.type === "ui") {
+                if (event.data.display) {
+                    document.getElementById('announcement').style.display = 'block';
+                    document.getElementById('message').innerText = event.data.message;
+                    document.getElementById('playerInfo').innerText = 'Announced by Staff Member: ' + event.data.playerName + ' (ID: ' + event.data.playerId + ')';
+                    document.body.classList.add('dark-overlay'); // Add dark overlay class
+                } else {
+                    document.getElementById('announcement').style.display = 'none';
+                    document.body.classList.remove('dark-overlay'); // Remove dark overlay class
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
