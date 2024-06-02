@@ -15,5 +15,5 @@ How to install
 DO NOT UPLOAD OR DISTRIBUTE 
 THIS FILE WITHOUT EXPLICIT PERMISSION
 
-All Credits - MrSkeeps
+All Credits - Vinny Scipts
 
