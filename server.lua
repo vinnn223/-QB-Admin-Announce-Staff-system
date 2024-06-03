@@ -1,5 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-
 -- Load the configuration
 Config = {}
 CreateThread(function()
@@ -18,12 +16,19 @@ CreateThread(function()
 end)
 
 CreateThread(function()
+    while not QBCore do -- Wait until QBCore is properly initialized
+        Wait(100)
+        QBCore = exports['qb-core']:GetCoreObject()
+    end
+
     -- Wait for Config to be loaded
     while not Config.AnnounceStaffCommand do
         Wait(100)
     end
 
-    RegisterCommand(Config.AnnounceStaffCommand, function(source, args, rawCommand)
+    -- Register the command with a description
+    local description = "Announce a message to all members [Messge]"
+    QBCore.Commands.Add(Config.AnnounceStaffCommand, description, {}, false, function(source, args)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         
         local hasPermission = false
@@ -42,9 +47,10 @@ CreateThread(function()
             local playerId = source
             TriggerClientEvent('god_announcements:showAnnouncement', -1, msg, playerName, playerId)
         else
-            TriggerClientEvent('QBCore:Notify', source, 'You do not have permission to use this command', 'error')
+            -- Print to console as Notify function not available
+            print("You do not have permission to use this command.")
         end
-    end, false)
+    end)
 end)
 
 
