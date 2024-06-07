@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Your Name'
+author 'Vinny Scipts'
 description 'Gods Only Announcement System'
 version '1.0.0'
 
