@@ -7,9 +7,8 @@
 
 How to install
 
-1. Replace chat in your resources folder
-2. ensure QB-Admin-Announce-Staff-system 
-3. Enjoy!
+1. ensure QB-Admin-Announce-Staff-system 
+2. Enjoy!
 
 
 DO NOT UPLOAD OR DISTRIBUTE 
